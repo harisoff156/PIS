@@ -1,0 +1,33 @@
+name: Sync Google Drive
+
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install rclone
+        run: curl https://rclone.org/install.sh | sudo bash
+
+      - name: Configure rclone
+        run: |
+          mkdir -p ~/.config/rclone
+          echo "${{ secrets.RCLONE_CONF }}" > ~/.config/rclone/rclone.conf
+
+      - name: Sync from Google Drive
+        run: |
+          rclone sync "gdrive:${{ secrets.FOLDER_ID }}" ./data \
+            --drive-use-trash=false \
+            -v
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add ./data
+          git diff --staged --quiet || (git commit -m "Sync from Google Drive $(date +'%Y-%m-%d')" && git push)
