@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-05-21T11:00:00.000Z" agent="capy" version="22.0.0">
+  <diagram name="Cisco network topology" id="net_topology">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- INTERNET cloud -->
+        <mxCell id="internet" value="Интернет (МПЛС-оператор + резервный канал)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="700" y="40" width="320" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Cisco ISR 4451-X edge router -->
+        <mxCell id="edge_router" value="Cisco ISR 4451-X&#10;маршрутизатор периметра (E-BGP, NAT, IPSec)" style="shape=mscae/Router;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontSize=11;fillColor=#82B366;strokeColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="800" y="160" width="120" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Cisco ASA 5525-X firewall -->
+        <mxCell id="firewall" value="Cisco ASA 5525-X&#10;межсетевой экран (NGFW)" style="shape=mscae/Firewall;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontSize=11;fillColor=#D32F2F;strokeColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="800" y="290" width="120" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- DMZ zone -->
+        <mxCell id="dmz" value="DMZ (Личный кабинет, веб-портал, API)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="290" width="280" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Core Cisco Nexus 9504 #1 -->
+        <mxCell id="core1" value="Cisco Nexus 9504 (Core-1)&#10;ядро ЦОД Самара (VXLAN)" style="shape=mscae/Switch;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontSize=11;fillColor=#1976D2;strokeColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="500" y="420" width="120" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Core Cisco Nexus 9504 #2 -->
+        <mxCell id="core2" value="Cisco Nexus 9508 (Core-2)&#10;резервное ядро (N+1)" style="shape=mscae/Switch;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontSize=11;fillColor=#1976D2;strokeColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="700" y="420" width="120" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Distribution Catalyst 9500 -->
+        <mxCell id="dist1" value="Cisco Catalyst 9500&#10;уровень распределения&#10;(VLAN, QoS)" style="shape=mscae/Switch;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontSize=11;fillColor=#388E3C;strokeColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="380" y="580" width="120" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="dist2" value="Cisco Catalyst 9500&#10;уровень распределения&#10;(филиалы Самары)" style="shape=mscae/Switch;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontSize=11;fillColor=#388E3C;strokeColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="600" y="580" width="120" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="dist3" value="Cisco Catalyst 9500&#10;уровень распределения&#10;(филиалы области)" style="shape=mscae/Switch;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontSize=11;fillColor=#388E3C;strokeColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="820" y="580" width="120" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Access switches Catalyst 9300 -->
+        <mxCell id="acc1" value="Catalyst 9300&#10;Самарское отделение" style="shape=mscae/Switch;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontSize=10;fillColor=#F57C00;strokeColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="280" y="740" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="acc2" value="Catalyst 9300&#10;Кинельское отделение" style="shape=mscae/Switch;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontSize=10;fillColor=#F57C00;strokeColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="400" y="740" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="acc3" value="Catalyst 9300&#10;Тольяттинское отделение" style="shape=mscae/Switch;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontSize=10;fillColor=#F57C00;strokeColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="520" y="740" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="acc4" value="Catalyst 9300&#10;Сызранское отделение" style="shape=mscae/Switch;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontSize=10;fillColor=#F57C00;strokeColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="640" y="740" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="acc5" value="Catalyst 9300&#10;Новокуйбышевское отделение" style="shape=mscae/Switch;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontSize=10;fillColor=#F57C00;strokeColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="760" y="740" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="acc6" value="Catalyst 9300&#10;Точки 15 ещё отделений" style="shape=mscae/Switch;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontSize=10;fillColor=#F57C00;strokeColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="880" y="740" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Wireless AP Catalyst 9120AX -->
+        <mxCell id="ap" value="Cisco Catalyst 9120AX&#10;точки доступа Wi-Fi (рабочие места операторов)" style="shape=mscae/Endpoint;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontSize=10;fillColor=#9C27B0;strokeColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="600" width="220" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Workstations -->
+        <mxCell id="pc1" value="ПК операторов&#10;контакт-центра (АСУ СЭРП, биллинг)" style="shape=mscae/Workstation;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontSize=10;fillColor=#673AB7;strokeColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="20" y="740" width="180" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Data Center components -->
+        <mxCell id="dc_label" value="Основной ЦОД (Самара)" style="text;html=1;align=center;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="420" width="280" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="hds" value="HDS AMS1000&#10;Storage кластер" style="shape=mscae/StorageDevice;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontSize=10;fillColor=#455A64;strokeColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="srv1" value="Server VMware&#10;vCenter, ESXi" style="shape=mscae/Server;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontSize=10;fillColor=#1565C0;strokeColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="srv2" value="Server АСУ СЭРП&#10;SAP for Utilities" style="shape=mscae/Server;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontSize=10;fillColor=#1565C0;strokeColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="srv3" value="Server Postgres Pro&#10;Enterprise 16" style="shape=mscae/Server;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontSize=10;fillColor=#1565C0;strokeColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="630" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="srv4" value="Server ELMA365&#10;BPM Engine" style="shape=mscae/Server;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontSize=10;fillColor=#1565C0;strokeColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="630" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Backup DC -->
+        <mxCell id="bkp_dc" value="Резервный ЦОД (геораспределённая площадка)&#10;репликация Postgres Pro + ELMA365" style="shape=cloud;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="720" width="280" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- IoT/AIIS KUE -->
+        <mxCell id="iot" value="АИИС КУЭ &#10;интеллектуальные приборы учёта&#10;(MQTT)" style="shape=mscae/IOT_HUB;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontSize=10;fillColor=#00897B;strokeColor=#fff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="430" width="220" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- SD-WAN -->
+        <mxCell id="sdwan" value="Cisco SD-WAN&#10;vManage / vSmart / vBond" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#9c27b0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="160" width="260" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Connections -->
+        <mxCell id="e_int_edge" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeWidth=2;" edge="1" parent="1" source="internet" target="edge_router">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_edge_fw" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeWidth=2;" edge="1" parent="1" source="edge_router" target="firewall">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_fw_dmz" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;" edge="1" parent="1" source="firewall" target="dmz">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_fw_core1" style="endArrow=classic;html=1;exitX=0.25;exitY=1;entryX=0.5;entryY=0;strokeWidth=2;" edge="1" parent="1" source="firewall" target="core1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_fw_core2" style="endArrow=classic;html=1;exitX=0.75;exitY=1;entryX=0.5;entryY=0;strokeWidth=2;" edge="1" parent="1" source="firewall" target="core2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_core1_core2" style="endArrow=none;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;dashed=1;" edge="1" parent="1" source="core1" target="core2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_core_dist1" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="core1" target="dist1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_core_dist2" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="core1" target="dist2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_core_dist3" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="core2" target="dist3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_dist1_acc1" style="endArrow=classic;html=1;strokeWidth=1;" edge="1" parent="1" source="dist1" target="acc1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_dist1_acc2" style="endArrow=classic;html=1;strokeWidth=1;" edge="1" parent="1" source="dist1" target="acc2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_dist2_acc3" style="endArrow=classic;html=1;strokeWidth=1;" edge="1" parent="1" source="dist2" target="acc3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_dist2_acc4" style="endArrow=classic;html=1;strokeWidth=1;" edge="1" parent="1" source="dist2" target="acc4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_dist3_acc5" style="endArrow=classic;html=1;strokeWidth=1;" edge="1" parent="1" source="dist3" target="acc5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_dist3_acc6" style="endArrow=classic;html=1;strokeWidth=1;" edge="1" parent="1" source="dist3" target="acc6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_acc1_pc1" style="endArrow=classic;html=1;strokeWidth=1;" edge="1" parent="1" source="acc1" target="pc1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_core1_dc1" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="core1" target="hds">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_core1_srv1" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="core1" target="srv1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_core2_srv2" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="core2" target="srv2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_srv1_srv3" style="endArrow=none;html=1;strokeWidth=1;" edge="1" parent="1" source="srv1" target="srv3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_srv2_srv4" style="endArrow=none;html=1;strokeWidth=1;" edge="1" parent="1" source="srv2" target="srv4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_dc_bkp" style="endArrow=classic;html=1;dashed=1;strokeWidth=2;" edge="1" parent="1" source="srv3" target="bkp_dc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_iot_core1" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="iot" target="core1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ap_dist1" style="endArrow=classic;html=1;strokeWidth=1;" edge="1" parent="1" source="ap" target="dist1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_sdwan_edge" style="endArrow=none;html=1;dashed=1;strokeWidth=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="sdwan" target="edge_router">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Title -->
+        <mxCell id="title" value="Рисунок 5.1 — Логическая и физическая схема сетевой инфраструктуры ПАО «Самараэнерго» (Cisco Packet Tracer)" style="text;html=1;align=center;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="10" width="1200" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

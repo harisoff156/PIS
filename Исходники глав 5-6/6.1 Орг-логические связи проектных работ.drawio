@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-05-21T11:00:00.000Z" agent="capy" version="22.0.0">
+  <diagram name="6.1 Орг-логические связи" id="org_log">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Рисунок 6.1 — Организационно-логические связи проектных работ ИС ПАО «Самараэнерго»" style="text;html=1;align=center;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="1400" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1" value="1. Анализ организации&#10;и предпроектное&#10;обследование" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="180" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" value="2. Определение&#10;потребностей и&#10;обоснование ИС" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="230" y="180" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="3. Формирование&#10;требований к ИС" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="400" y="180" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s4" value="4. Разработка&#10;концепции ИС" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="570" y="180" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s5" value="5. Разработка и&#10;утверждение&#10;технического задания" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="740" y="180" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s6" value="6. Эскизный проект&#10;(предварительные&#10;проектные решения)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="910" y="180" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s7" value="7. Технический и&#10;рабочий проект&#10;(разработка ПО, BPM)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="180" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s8" value="8. Рабочая&#10;документация" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="180" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s9" value="9. Тестирование&#10;и ввод в&#10;эксплуатацию" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="180" width="150" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Sub-tasks on stage 7 (parallel) -->
+        <mxCell id="s7a" value="7а. Подсистема&#10;биллинга и&#10;дебиторки" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="320" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s7b" value="7б. Подсистема&#10;ИТ-обеспечения и ИБ" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="400" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s7c" value="7в. Подсистема&#10;клиентского&#10;обслуживания" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="480" width="160" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Sequential connections -->
+        <mxCell id="cs1" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="s1" target="s2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cs2" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="s2" target="s3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cs3" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="s3" target="s4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cs4" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="s4" target="s5"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cs5" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="s5" target="s6"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cs6" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="s6" target="s7"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cs7" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="s7" target="s8"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cs8" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="s8" target="s9"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- Decomposition of stage 7 -->
+        <mxCell id="cd7a" style="endArrow=classic;html=1;strokeWidth=1;dashed=1;" edge="1" parent="1" source="s7" target="s7a"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cd7b" style="endArrow=classic;html=1;strokeWidth=1;dashed=1;" edge="1" parent="1" source="s7" target="s7b"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cd7c" style="endArrow=classic;html=1;strokeWidth=1;dashed=1;" edge="1" parent="1" source="s7" target="s7c"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- Merge of 7a/7b/7c into 8 -->
+        <mxCell id="cm7a" style="endArrow=classic;html=1;strokeWidth=1;dashed=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="s7a" target="s8"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1280" y="350" /></Array></mxGeometry></mxCell>
+        <mxCell id="cm7b" style="endArrow=classic;html=1;strokeWidth=1;dashed=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="s7b" target="s8"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1280" y="430" /></Array></mxGeometry></mxCell>
+        <mxCell id="cm7c" style="endArrow=classic;html=1;strokeWidth=1;dashed=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="s7c" target="s8"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1280" y="510" /></Array></mxGeometry></mxCell>
+
+        <mxCell id="legend" value="Условные обозначения:&#10;Сплошные синие — последовательные этапы (Finish-to-Start). Красный — этап 7 (критический). Зелёный — этап 9 (ввод в эксплуатацию).&#10;Пунктир — декомпозиция этапа 7 на параллельные подпотоки по подсистемам, синхронизируемые перед началом этапа 8." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="60" y="600" width="1530" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
