@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Файл MS Project (формат XML, открывается в MS Project, ProjectLibre, OpenProj)
+  Курсовой проект: ИС ПАО «Самараэнерго». Глава 6 — Управление проектированием ИС.
+  Содержание: 9 этапов проектирования с длительностями из таблицы 6.2.
+  Дата начала проекта: 2026-09-01 (можно изменить в свойствах проекта).
+-->
+<Project xmlns="http://schemas.microsoft.com/project">
+  <Name>IS_Samaraenergo_KP</Name>
+  <Title>Курсовой проект: ИС ПАО «Самараэнерго», задача «Управление дебиторской задолженностью»</Title>
+  <Subject>Управление проектированием ИС (глава 6)</Subject>
+  <Author>Харисов А.Р. (ПИ-2-24)</Author>
+  <StartDate>2026-09-01T08:00:00</StartDate>
+  <FinishDate>2028-10-13T17:00:00</FinishDate>
+  <ScheduleFromStart>1</ScheduleFromStart>
+  <FYStartDate>1</FYStartDate>
+  <CriticalSlackLimit>0</CriticalSlackLimit>
+  <CurrencyDigits>2</CurrencyDigits>
+  <CurrencySymbol>₽</CurrencySymbol>
+  <CurrencySymbolPosition>1</CurrencySymbolPosition>
+  <CalendarUID>1</CalendarUID>
+  <MinutesPerDay>480</MinutesPerDay>
+  <MinutesPerWeek>2400</MinutesPerWeek>
+  <DaysPerMonth>20</DaysPerMonth>
+
+  <Calendars>
+    <Calendar>
+      <UID>1</UID>
+      <Name>Standard</Name>
+      <IsBaseCalendar>1</IsBaseCalendar>
+      <WeekDays>
+        <WeekDay><DayType>1</DayType><DayWorking>0</DayWorking></WeekDay>
+        <WeekDay><DayType>2</DayType><DayWorking>1</DayWorking>
+          <WorkingTimes>
+            <WorkingTime><FromTime>08:00:00</FromTime><ToTime>12:00:00</ToTime></WorkingTime>
+            <WorkingTime><FromTime>13:00:00</FromTime><ToTime>17:00:00</ToTime></WorkingTime>
+          </WorkingTimes>
+        </WeekDay>
+        <WeekDay><DayType>3</DayType><DayWorking>1</DayWorking>
+          <WorkingTimes>
+            <WorkingTime><FromTime>08:00:00</FromTime><ToTime>12:00:00</ToTime></WorkingTime>
+            <WorkingTime><FromTime>13:00:00</FromTime><ToTime>17:00:00</ToTime></WorkingTime>
+          </WorkingTimes>
+        </WeekDay>
+        <WeekDay><DayType>4</DayType><DayWorking>1</DayWorking>
+          <WorkingTimes>
+            <WorkingTime><FromTime>08:00:00</FromTime><ToTime>12:00:00</ToTime></WorkingTime>
+            <WorkingTime><FromTime>13:00:00</FromTime><ToTime>17:00:00</ToTime></WorkingTime>
+          </WorkingTimes>
+        </WeekDay>
+        <WeekDay><DayType>5</DayType><DayWorking>1</DayWorking>
+          <WorkingTimes>
+            <WorkingTime><FromTime>08:00:00</FromTime><ToTime>12:00:00</ToTime></WorkingTime>
+            <WorkingTime><FromTime>13:00:00</FromTime><ToTime>17:00:00</ToTime></WorkingTime>
+          </WorkingTimes>
+        </WeekDay>
+        <WeekDay><DayType>6</DayType><DayWorking>1</DayWorking>
+          <WorkingTimes>
+            <WorkingTime><FromTime>08:00:00</FromTime><ToTime>12:00:00</ToTime></WorkingTime>
+            <WorkingTime><FromTime>13:00:00</FromTime><ToTime>17:00:00</ToTime></WorkingTime>
+          </WorkingTimes>
+        </WeekDay>
+        <WeekDay><DayType>7</DayType><DayWorking>0</DayWorking></WeekDay>
+      </WeekDays>
+    </Calendar>
+  </Calendars>
+
+  <Tasks>
+    <Task>
+      <UID>1</UID><ID>1</ID><Name>1. Анализ организации и предпроектное обследование</Name>
+      <Type>1</Type><IsNull>0</IsNull><DurationFormat>7</DurationFormat>
+      <Duration>PT240H0M0S</Duration>
+      <Start>2026-09-01T08:00:00</Start>
+      <Finish>2026-10-12T17:00:00</Finish>
+      <PredecessorLink></PredecessorLink>
+    </Task>
+    <Task>
+      <UID>2</UID><ID>2</ID><Name>2. Определение потребностей и обоснование создания ИС</Name>
+      <Type>1</Type><IsNull>0</IsNull>
+      <Duration>PT160H0M0S</Duration>
+      <Start>2026-10-13T08:00:00</Start>
+      <Finish>2026-11-09T17:00:00</Finish>
+      <PredecessorLink><PredecessorUID>1</PredecessorUID><Type>1</Type></PredecessorLink>
+    </Task>
+    <Task>
+      <UID>3</UID><ID>3</ID><Name>3. Формирование требований к ИС</Name>
+      <Type>1</Type><IsNull>0</IsNull>
+      <Duration>PT280H0M0S</Duration>
+      <Start>2026-11-10T08:00:00</Start>
+      <Finish>2026-12-29T17:00:00</Finish>
+      <PredecessorLink><PredecessorUID>2</PredecessorUID><Type>1</Type></PredecessorLink>
+    </Task>
+    <Task>
+      <UID>4</UID><ID>4</ID><Name>4. Разработка концепции ИС</Name>
+      <Type>1</Type><IsNull>0</IsNull>
+      <Duration>PT320H0M0S</Duration>
+      <Start>2026-12-30T08:00:00</Start>
+      <Finish>2027-02-24T17:00:00</Finish>
+      <PredecessorLink><PredecessorUID>3</PredecessorUID><Type>1</Type></PredecessorLink>
+    </Task>
+    <Task>
+      <UID>5</UID><ID>5</ID><Name>5. Разработка и утверждение технического задания</Name>
+      <Type>1</Type><IsNull>0</IsNull>
+      <Duration>PT400H0M0S</Duration>
+      <Start>2027-02-25T08:00:00</Start>
+      <Finish>2027-05-05T17:00:00</Finish>
+      <PredecessorLink><PredecessorUID>4</PredecessorUID><Type>1</Type></PredecessorLink>
+    </Task>
+    <Task>
+      <UID>6</UID><ID>6</ID><Name>6. Эскизный проект (предварительные проектные решения)</Name>
+      <Type>1</Type><IsNull>0</IsNull>
+      <Duration>PT560H0M0S</Duration>
+      <Start>2027-05-06T08:00:00</Start>
+      <Finish>2027-08-12T17:00:00</Finish>
+      <PredecessorLink><PredecessorUID>5</PredecessorUID><Type>1</Type></PredecessorLink>
+    </Task>
+    <Task>
+      <UID>7</UID><ID>7</ID><Name>7. Технический и рабочий проект (разработка ПО, BPM, инфраструктура)</Name>
+      <Type>1</Type><IsNull>0</IsNull>
+      <Duration>PT1600H0M0S</Duration>
+      <Start>2027-08-13T08:00:00</Start>
+      <Finish>2028-05-26T17:00:00</Finish>
+      <PredecessorLink><PredecessorUID>6</PredecessorUID><Type>1</Type></PredecessorLink>
+    </Task>
+    <Task>
+      <UID>8</UID><ID>8</ID><Name>8. Подготовка рабочей документации</Name>
+      <Type>1</Type><IsNull>0</IsNull>
+      <Duration>PT400H0M0S</Duration>
+      <Start>2028-05-29T08:00:00</Start>
+      <Finish>2028-08-04T17:00:00</Finish>
+      <PredecessorLink><PredecessorUID>7</PredecessorUID><Type>1</Type></PredecessorLink>
+    </Task>
+    <Task>
+      <UID>9</UID><ID>9</ID><Name>9. Тестирование и ввод в эксплуатацию</Name>
+      <Type>1</Type><IsNull>0</IsNull>
+      <Duration>PT480H0M0S</Duration>
+      <Start>2028-08-07T08:00:00</Start>
+      <Finish>2028-10-13T17:00:00</Finish>
+      <PredecessorLink><PredecessorUID>8</PredecessorUID><Type>1</Type></PredecessorLink>
+    </Task>
+  </Tasks>
+
+  <Resources>
+    <Resource><UID>1</UID><ID>1</ID><Name>Бизнес-аналитик</Name><Type>1</Type></Resource>
+    <Resource><UID>2</UID><ID>2</ID><Name>Системный архитектор</Name><Type>1</Type></Resource>
+    <Resource><UID>3</UID><ID>3</ID><Name>Главный архитектор</Name><Type>1</Type></Resource>
+    <Resource><UID>4</UID><ID>4</ID><Name>Технический писатель</Name><Type>1</Type></Resource>
+    <Resource><UID>5</UID><ID>5</ID><Name>Разработчик (Python/FastAPI)</Name><Type>1</Type></Resource>
+    <Resource><UID>6</UID><ID>6</ID><Name>Разработчик (React)</Name><Type>1</Type></Resource>
+    <Resource><UID>7</UID><ID>7</ID><Name>Специалист BPM (ELMA365)</Name><Type>1</Type></Resource>
+    <Resource><UID>8</UID><ID>8</ID><Name>DevOps-инженер</Name><Type>1</Type></Resource>
+    <Resource><UID>9</UID><ID>9</ID><Name>QA-инженер</Name><Type>1</Type></Resource>
+    <Resource><UID>10</UID><ID>10</ID><Name>Инженер информационной безопасности</Name><Type>1</Type></Resource>
+    <Resource><UID>11</UID><ID>11</ID><Name>Сетевой инженер (Cisco)</Name><Type>1</Type></Resource>
+    <Resource><UID>12</UID><ID>12</ID><Name>Руководитель проекта</Name><Type>1</Type></Resource>
+  </Resources>
+</Project>

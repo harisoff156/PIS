@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-05-21T11:00:00.000Z" agent="capy" version="22.0.0">
+  <diagram name="IDEF0 - Информационные потоки ИС" id="idef0_isu">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Рисунок 3.5. Схема информационных потоков задач ИС ПАО «Самараэнерго» (IDEF0). Декомпозиция А0 → А1, А2, А3." style="text;html=1;align=center;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="1400" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- A0 top-level box -->
+        <mxCell id="a0" value="A0&#10;Информационное обеспечение&#10;бизнес-процессов&#10;ПАО «Самараэнерго»" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="120" width="280" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- A1: Подсистема расчётов с потребителями -->
+        <mxCell id="a1" value="A1&#10;Управление расчётами&#10;с потребителями&#10;(БП 1.3, биллинг)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="200" y="360" width="260" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- A2: Клиентское обслуживание -->
+        <mxCell id="a2" value="A2&#10;Клиентское обслуживание&#10;и контакт-центр&#10;(БП 2.2)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="660" y="360" width="280" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- A3: ИТ-обеспечение -->
+        <mxCell id="a3" value="A3&#10;Информационно-технологическое&#10;обеспечение и ИБ&#10;(БП 2.3)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="360" width="280" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- A1 inputs/outputs/controls/mechanisms -->
+        <!-- A1 Input (left) -->
+        <mxCell id="a1_in1" value="Показания приборов&#10;учёта (от A2)" style="text;html=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="370" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a1_in2" value="Справочник тарифов&#10;(из Финансового менеджмента)" style="text;html=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="420" width="130" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- A1 Control (top) -->
+        <mxCell id="a1_ctrl" value="ФЗ № 35-ФЗ;&#10;ПП РФ № 442;&#10;Регламент расчётов" style="text;html=1;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="225" y="280" width="180" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- A1 Mechanism (bottom) -->
+        <mxCell id="a1_mech" value="АСУ СЭРП, Postgres Pro,&#10;операторы расчётного отдела" style="text;html=1;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="225" y="510" width="180" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- A1 Output (right) -->
+        <mxCell id="a1_out1" value="Счета-квитанции;&#10;реестр платежей;&#10;реестр должников" style="text;html=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="470" y="370" width="170" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- A2 controls / inputs / outputs / mechanisms -->
+        <mxCell id="a2_in1" value="Обращения&#10;потребителей" style="text;html=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="510" y="370" width="130" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a2_ctrl" value="Регламент работы контакт-центра;&#10;Закон о защите прав потребителей" style="text;html=1;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="690" y="280" width="220" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a2_mech" value="Контакт-центр 8-800-1000-763,&#10;CRM, операторы 1-й/2-й линии" style="text;html=1;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="690" y="510" width="220" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a2_out1" value="Заявки на работы;&#10;показания (для A1)" style="text;html=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="950" y="370" width="160" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- A3 controls / mech / out -->
+        <mxCell id="a3_in1" value="Запросы на доступ,&#10;инциденты ИБ" style="text;html=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="970" y="430" width="130" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a3_ctrl" value="ФЗ № 187-ФЗ; ФЗ № 152-ФЗ;&#10;Приказ ФСТЭК № 239" style="text;html=1;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="280" width="200" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a3_mech" value="Cisco SD-WAN, ASA 5525-X,&#10;MaxPatrol SIEM, ГосСОПКА" style="text;html=1;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="510" width="200" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a3_out1" value="Сервисы инфраструктуры,&#10;средства ИБ, отчёты SIEM" style="text;html=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1410" y="370" width="200" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Decomposition arrow -->
+        <mxCell id="dec" style="endArrow=classic;html=1;dashed=1;strokeWidth=2;" edge="1" parent="1" source="a0" target="a2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dec1" style="endArrow=classic;html=1;dashed=1;strokeWidth=2;" edge="1" parent="1" source="a0" target="a1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dec3" style="endArrow=classic;html=1;dashed=1;strokeWidth=2;" edge="1" parent="1" source="a0" target="a3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- A1 arrows -->
+        <mxCell id="ea1_in1" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.3;strokeWidth=1.5;" edge="1" parent="1" source="a1_in1" target="a1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea1_in2" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.7;strokeWidth=1.5;" edge="1" parent="1" source="a1_in2" target="a1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea1_ctrl" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.3;entryY=0;strokeWidth=1.5;" edge="1" parent="1" source="a1_ctrl" target="a1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea1_mech" style="endArrow=classic;html=1;exitX=0.5;exitY=0;entryX=0.3;entryY=1;strokeWidth=1.5;" edge="1" parent="1" source="a1_mech" target="a1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea1_out" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=1.5;" edge="1" parent="1" source="a1" target="a1_out1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- A1 -> A2 (cross flow: показания) -->
+        <mxCell id="ea2_in1" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.3;strokeWidth=1.5;" edge="1" parent="1" source="a2_in1" target="a2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea2_ctrl" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.3;entryY=0;strokeWidth=1.5;" edge="1" parent="1" source="a2_ctrl" target="a2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea2_mech" style="endArrow=classic;html=1;exitX=0.5;exitY=0;entryX=0.3;entryY=1;strokeWidth=1.5;" edge="1" parent="1" source="a2_mech" target="a2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea2_out" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=1.5;" edge="1" parent="1" source="a2" target="a2_out1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- A2 -> A1 informational flow -->
+        <mxCell id="cross_a2_a1" style="endArrow=classic;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.4;strokeWidth=1.5;strokeColor=#cc6600;" edge="1" parent="1" source="a2_out1" target="a1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- A3 arrows -->
+        <mxCell id="ea3_in1" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=1.5;" edge="1" parent="1" source="a3_in1" target="a3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea3_ctrl" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.3;entryY=0;strokeWidth=1.5;" edge="1" parent="1" source="a3_ctrl" target="a3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea3_mech" style="endArrow=classic;html=1;exitX=0.5;exitY=0;entryX=0.3;entryY=1;strokeWidth=1.5;" edge="1" parent="1" source="a3_mech" target="a3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea3_out" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=1.5;" edge="1" parent="1" source="a3" target="a3_out1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend" value="Условные обозначения IDEF0:&#10;Вход (I) — поступает слева; Выход (O) — выходит справа;&#10;Управление (C) — сверху (нормативка, регламенты);&#10;Механизм (M) — снизу (исполнители, ПО, оборудование).&#10;Декомпозиция: блоки A1–A3 раскрывают функцию A0." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="60" y="640" width="500" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

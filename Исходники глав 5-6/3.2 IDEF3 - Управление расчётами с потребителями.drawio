@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-05-21T11:00:00.000Z" agent="capy" version="22.0.0">
+  <diagram name="IDEF3 - Управление расчётами с потребителями" id="idef3_billing">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Рисунок 3.2. Организационно-логическая схема подсистемы «Управление расчётами с потребителями» (IDEF3)" style="text;html=1;align=center;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="1400" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- IDEF3 process boxes - "Поведенческие единицы работы" UOB -->
+        <mxCell id="start" value="Начало&#10;ежемесячного&#10;цикла биллинга" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="240" width="120" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="t31" value="3.1 Сбор показаний&#10;приборов учёта&#10;(операторы, потребители,&#10;АИИС КУЭ)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="220" y="220" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="t31_label" value="UOB 1" style="text;html=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="225" y="350" width="40" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="t32" value="3.2 Расчёт стоимости&#10;по тарифам&#10;(применение справочника&#10;тарифов)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="440" y="220" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="t32_label" value="UOB 2" style="text;html=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="445" y="350" width="40" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="t33" value="3.3 Формирование&#10;счетов-квитанций&#10;и доставка" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="660" y="220" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="t33_label" value="UOB 3" style="text;html=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="665" y="350" width="40" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- AND fork (J&) -->
+        <mxCell id="fork_and" value="&amp;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="260" width="60" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="t34" value="3.4 Приём платежей&#10;и автоматическое&#10;погашение" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="980" y="140" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="t34_label" value="UOB 4" style="text;html=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="985" y="245" width="40" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="t35" value="3.5 Анализ дебиторской&#10;задолженности&#10;(ежедневный, по таймеру)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="980" y="320" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="t35_label" value="UOB 5" style="text;html=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="985" y="425" width="40" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- XOR junction (J X) for debt branching -->
+        <mxCell id="xor1" value="X" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="350" width="50" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="t36a" value="3.6.1 Уведомление&#10;(до 30 дней)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="220" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="t36b" value="3.6.2 Претензия&#10;(30–90 дней)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="320" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="t36c" value="3.6.3 Иск/ограничение&#10;(свыше 90 дней)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="420" width="160" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="end" value="Закрытие&#10;месячного&#10;цикла биллинга" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1510" y="320" width="120" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Connections -->
+        <mxCell id="c1" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="start" target="t31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="t31" target="t32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="t32" target="t33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="t33" target="fork_and">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c5a" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="fork_and" target="t34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c5b" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="fork_and" target="t35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="t35" target="xor1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c7a" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="xor1" target="t36a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c7b" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="xor1" target="t36b">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c7c" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="xor1" target="t36c">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c8a" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="t36a" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c8b" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="t36b" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c8c" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1" source="t36c" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c9" style="endArrow=classic;html=1;strokeWidth=2;dashed=1;" edge="1" parent="1" source="t34" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend" value="Условные обозначения:&#10;UOB — поведенческая единица работы (Unit of Behavior)&#10;&amp; — соединение «И» (AND junction)&#10;X — соединение «Исключающее ИЛИ» (XOR junction)&#10;-- - — обратная связь" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="60" y="500" width="380" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
